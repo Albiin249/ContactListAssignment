@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactListAssignment", "ContactListAssignment\ContactListAssignment.csproj", "{CA6572E6-79E0-4035-B288-E43337B4D8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{1D73CDCF-35F1-47E3-AAC6-D5276EFE6E7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business.Tests", "Business.Tests\Business.Tests.csproj", "{AB0BEAFF-5491-417C-B7C2-418833E0A385}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA6572E6-79E0-4035-B288-E43337B4D8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6572E6-79E0-4035-B288-E43337B4D8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6572E6-79E0-4035-B288-E43337B4D8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6572E6-79E0-4035-B288-E43337B4D8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D73CDCF-35F1-47E3-AAC6-D5276EFE6E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D73CDCF-35F1-47E3-AAC6-D5276EFE6E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D73CDCF-35F1-47E3-AAC6-D5276EFE6E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D73CDCF-35F1-47E3-AAC6-D5276EFE6E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0BEAFF-5491-417C-B7C2-418833E0A385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0BEAFF-5491-417C-B7C2-418833E0A385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0BEAFF-5491-417C-B7C2-418833E0A385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0BEAFF-5491-417C-B7C2-418833E0A385}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

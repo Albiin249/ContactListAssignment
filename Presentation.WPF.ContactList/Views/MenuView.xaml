@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Presentation.WPF.ContactList.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentation.WPF.ContactList.Views"
+             xmlns:viewmodels="clr-namespace:Presentation.WPF.ContactList.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:MenuViewModel}"
+             
+             Background="White"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="{Binding Title}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+        <Button Grid.Row="0" Padding="8" Margin="0 150 0 0" Content="Add New Contact" Command="{Binding GoToAddContactCommand}"/>
+        <Button Grid.Row="1" Padding="8" Margin="0 40 0 0" Content="Edit/Delete Contact" Command="{Binding GoToEditDeleteContactCommand}"/>
+        <Button Grid.Row="2" Padding="8" Margin="0 40 0 0" Content="Show Contact List" Command="{Binding GoToContactListCommand}" />
+        <Button Grid.Row="4" Padding="8" Margin="0 40 0 0" Content="Exit" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Presentation.WPF.ContactList.Views.EditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Presentation.WPF.ContactList.Views"
+             xmlns:viewmodels="clr-namespace:Presentation.WPF.ContactList.ViewModels"
+             xmlns:models="clr-namespace:Business.Models;assembly=Business"
+             d:DataContext="{d:DesignInstance Type=viewmodels:EditViewModel}"
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="20" FontWeight="Bold" Text="Edit Contact" HorizontalAlignment="Center"  />
+
+        <StackPanel Grid.Row="1" Margin="20" VerticalAlignment="Top">
+            <TextBlock><Run Text="ID: "/> <Run Text="{Binding Contact.Id}"/></TextBlock>
+
+            <TextBlock Text="Firstname" Margin="0 10 0 0"/>
+            <TextBox Text="{Binding Contact.FirstName}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="Lastname" />
+            <TextBox Text="{Binding Contact.LastName}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="Email" />
+            <TextBox Text="{Binding Contact.Email}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="Phone number" />
+            <TextBox Text="{Binding Contact.PhoneNumber}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="Street address" />
+            <TextBox Text="{Binding Contact.StreetAddress}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="City" />
+            <TextBox Text="{Binding Contact.City}" Margin="0,0,0,10" Padding="5" FontSize="14" />
+
+            <TextBlock Text="Postal Code" />
+            <TextBox Text="{Binding Contact.PostalCode}" Margin="0,0,0,20" Padding="5" FontSize="14" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <Button Content="Save" Command="{Binding SaveContactCommand}" Padding="10,5" Width="100" Margin="0,10" />
+            <Button Content="Cancel" Command="{Binding CancelCommand}" Padding="10,5" Width="100" Margin="0,10" />
+        </StackPanel>
+    </Grid>
+</UserControl>

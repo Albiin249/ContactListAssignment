@@ -1,0 +1,45 @@
+﻿<Window x:Class="Presentation.WPF.ContactList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.WPF.ContactList"
+        
+        
+        xmlns:views="clr-namespace:Presentation.WPF.ContactList.Views"
+        xmlns:viewmodels="clr-namespace:Presentation.WPF.ContactList.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
+        
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Contact list" Height="650" Width="350">
+
+
+
+    <Grid Margin="20">
+        
+        <ContentControl Content="{Binding CurrentViewModel}">
+            
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+                    <views:MenuView />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:AddContactViewModel}">
+                    <views:AddContactView />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ShowContactListViewModel}">
+                    <views:ShowContactListView />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:EditDeleteContactViewModel}">
+                    <views:EditDeleteContactView />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:EditViewModel}">
+                    <views:EditView />
+                </DataTemplate>
+
+            </ContentControl.Resources>
+            
+        </ContentControl>
+        
+    </Grid>
+</Window>

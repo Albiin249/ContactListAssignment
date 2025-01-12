@@ -1,10 +1,11 @@
-﻿using Business.Models;
+﻿using Business.Interfaces;
+using Business.Models;
 using System.Diagnostics;
 using System.Text.Json;
 
 namespace Business.Services;
 
-public class FileService
+public class FileService : IFileService
 {
     private readonly string _directoryPath;
     private readonly string _filePath;

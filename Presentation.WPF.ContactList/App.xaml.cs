@@ -1,4 +1,5 @@
 ﻿using Business.Factories;
+using Business.Interfaces;
 using Business.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,6 +38,9 @@ public partial class App : Application
 
                 services.AddTransient<ContactFactory>();
                 services.AddTransient<ContactService>();
+
+                services.AddSingleton<IFileService, FileService>();
+                services.AddSingleton<ContactService>();
             })
             .Build();
     }

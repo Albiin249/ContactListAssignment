@@ -4,7 +4,14 @@ namespace ContactListAssignment.Dialogs;
 
 public class ListDialog
 {
-    private readonly ContactService _contactService = new();
+    private readonly ContactService _contactService;
+
+    public ListDialog()
+    {
+        var fileService = new FileService();
+        _contactService = new ContactService(fileService);
+    }
+
     public void ViewAllContactsDialog()
     {
         Console.Clear();

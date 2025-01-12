@@ -1,14 +1,22 @@
 ﻿
 
+using Business.Interfaces;
 using Business.Models;
 using System.Diagnostics;
 
 namespace Business.Services;
 
-public class ContactService
+public class ContactService : IContactService
 {
     private List<Contact> _contacts = [];
-    private readonly FileService _fileService = new();
+
+    private readonly IFileService _fileService;  
+
+    
+    public ContactService(IFileService fileService)
+    {
+        _fileService = fileService;
+    }
 
     public void Add(Contact contact)
     {
@@ -16,6 +24,8 @@ public class ContactService
         _contacts.Add(contact);
         _fileService.SaveListToFile(_contacts);
     }
+
+   
 
     //Tog hjälp utav ChatGPT här, för att spara ner den uppdatera kontakten till listan.
     //Koden kollar ifall det finns någon likadan kontakt med hjälp av ID och isåfall skriver över ifall det finns.
@@ -72,4 +82,6 @@ public class ContactService
         _contacts = _fileService.LoadListFromFile();
         return _contacts;
     }
+
+
 }

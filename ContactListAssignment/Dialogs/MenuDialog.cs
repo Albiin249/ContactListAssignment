@@ -1,5 +1,6 @@
 ﻿using Business.Factories;
 using Business.Models;
+using Business.Services;
 
 namespace ContactListAssignment.Dialogs;
 
@@ -26,7 +27,9 @@ public class MenuDialog
         Console.WriteLine("");
 
         var contactFactory = new ContactFactory();
-        var contactService = new Business.Services.ContactService();
+
+        var fileService = new FileService();
+        var contactService = new Business.Services.ContactService(fileService);
 
         /* Tog lite hjälp av ChatGPT här för att anropa metoderna */
         switch (option.ToLower())
